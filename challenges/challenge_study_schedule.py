@@ -1,10 +1,3 @@
-
-# lista de tuplas (permanence_period)
-
-#  em que a função desenvolvida por você será
-#  chamada várias vezes com valores diferentes
-#  para a variável target_time e serão analisados os retornos da função.
-
 def study_schedule(permanence_period, target_time):
     people = 0
 
