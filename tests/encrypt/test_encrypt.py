@@ -10,3 +10,8 @@ def test_encrypt_message():
 
     with pytest.raises(TypeError, match="tipo inválido para message"):
         encrypt_message(2, 2)
+
+    assert encrypt_message(input_message, -2) == 'olleH'
+    assert encrypt_message(input_message, 2) == 'oll_eH'
+    assert encrypt_message(input_message, 1) == 'H_olle'
+    assert encrypt_message(input_message, 3) == 'leH_ol'
