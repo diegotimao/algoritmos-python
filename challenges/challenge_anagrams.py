@@ -1,4 +1,4 @@
-alfa = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'L', 'N', 'M', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'X', 'Z']
+alfa = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J','K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'w', 'X', 'Y', 'Z']
 
 
 def list_numbers(list):
@@ -11,6 +11,7 @@ def list_numbers(list):
                 list_index.append(alfa.index(search_index))
     
     return list_index
+
 
 def is_anagram(first_string, second_string):
     
