@@ -1,23 +1,21 @@
-alfa = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J','K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'w', 'X', 'Y', 'Z']
+def str_order(word) -> str:
+    params = list(word.lower())
 
+    for index in range(len(params) - 1):
+        for item in range(0, len(params) - 1 - index):
+            if params[item] > params[item + 1]:
+                params[item], params[item + 1] = params[item + 1], params[item]
 
-def list_numbers(list):
-    list_index = []
-
-    for index in list:
-
-        for search_index in alfa:
-            if search_index == index.upper():
-                list_index.append(alfa.index(search_index))
-    
-    return list_index
+    return "".join(params)
 
 
 def is_anagram(first_string, second_string):
-    
-    first_str = list_numbers(first_string)
-    second_str = list_numbers(second_string)
-    
-    print(first_str)
-    print(second_str)
+    first_str = str_order(first_string)
+    second_str = str_order(second_string)
 
+    if first_str == second_str:
+        return (first_str, second_str, True)
+    elif first_str == "" or second_str == "":
+        return (first_str, second_str, False)
+    else:
+        return (first_str, second_str, False)
