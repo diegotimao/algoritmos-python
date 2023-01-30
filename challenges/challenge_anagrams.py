@@ -13,9 +13,9 @@ def is_anagram(first_string, second_string):
     first_str = str_order(first_string)
     second_str = str_order(second_string)
 
-    if first_str == second_str:
-        return (first_str, second_str, True)
-    elif first_str == "" or second_str == "":
+    if first_str == "" or second_str == "":
         return (first_str, second_str, False)
+    elif first_str == second_str:
+        return (first_str, second_str, True)
     else:
         return (first_str, second_str, False)
