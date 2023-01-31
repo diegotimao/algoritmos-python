@@ -1,4 +1,4 @@
-def reverse_string(word):
+def is_palindrome(word):
     if str(word) == str(word)[::-1]:
         return True
     else:
@@ -9,5 +9,4 @@ def is_palindrome_iterative(word):
     if not word:
         return False
 
-    word_invert = reverse_string(word)
-    return word_invert
+    return is_palindrome(word)
