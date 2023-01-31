@@ -1,12 +1,13 @@
-def is_palindrome(word):
-    if str(word) == str(word)[::-1]:
-        return True
-    else:
-        return False
-
-
 def is_palindrome_iterative(word):
+    inverso = ""
+
     if not word:
         return False
 
-    return is_palindrome(word)
+    for item in range(len(word) - 1, -1, -1):
+        inverso += word[item]
+
+    if inverso == word:
+        return True
+    else:
+        return False
